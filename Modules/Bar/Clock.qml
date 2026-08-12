@@ -34,4 +34,20 @@ Item {
             visible: text !== ""          // collapses entirely in 24h mode
         }
     }
+
+     MouseArea {
+        id: mouse
+        anchors.fill: parent
+        hoverEnabled: true
+    }
+
+    BarPopup {
+        id: tooltip
+        anchorItem: col
+        visible: mouse.containsMouse
+
+        StyledText {
+            text:   Time.long_date
+        }
+    }
 }

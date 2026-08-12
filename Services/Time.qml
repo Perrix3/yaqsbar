@@ -3,6 +3,7 @@ pragma Singleton
 import Quickshell
 import QtQuick
 import qs.Config
+import qs.Strings
 
 // Wall clock
 Singleton {
@@ -12,6 +13,8 @@ Singleton {
         id: clock
         precision: SystemClock.Minutes
     }
+
+    readonly property string long_date: clock.date.toLocaleDateString(Qt.locale(Settings.locale), Strings.date_format_long)
 
     readonly property bool pm: clock.hours >= 12
 

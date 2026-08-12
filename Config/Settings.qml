@@ -5,13 +5,16 @@ import QtQuick
 
 Singleton {
     // General settings
-    readonly property string    font_main:          "Fira Code"                 // Normal font
-    readonly property int       font_size_normal:   12                          // Normal font size
-    readonly property string    font_icon:          "Symbols Nerd Font Mono"    // Font used by icons / IconText
-    readonly property int       font_size_icon:     12                          // Icon font size
+    readonly property string    font_main:              "Fira Code"                 // Normal font
+    readonly property int       font_size_normal:       12                          // Normal font size
+    readonly property string    font_icon:              "Symbols Nerd Font Mono"    // Font used by icons / IconText
+    readonly property int       font_size_icon:         12                          // Icon font size
+    readonly property string    locale:                 "en_GB"                     // Locale used by time and later on, language
+    readonly property int       bar_popup_border_width: 1                           // Popup's border width
+
     
     // Bar widgets and order, divided in 3 sections
-    readonly property var   bar_widgets_start:  ["workspaces"]
+    readonly property var   bar_widgets_start:  ["archupdates", "workspaces"]
     readonly property var   bar_widgets_center: [""]
     readonly property var   bar_widgets_end:    ["clock", "power"]
 
@@ -58,6 +61,18 @@ Singleton {
     readonly property int       power_menu_spacing:         15          // Power menu's spacing
     readonly property int       power_action_size:          90          // Power menu action's size
     readonly property int       power_action_icon_size:     28          // Power menu action icon size
+
+    // Updater
+    readonly property int       updates_poll_interval:  1800000             // 30 min
+    readonly property bool      update_pacman:          true                // Update pacman with script
+    readonly property bool      update_aur:             true                // Update aur with script
+    readonly property bool      update_flatpak:         true                // Update flatpak with script
+    readonly property bool      update_no_confirm:      true                // Use no-confirm on update script
+    readonly property var       update_terminal:        ["kitty", "--"]     // Terminal that runs the script
+    readonly property string    update_script:         Quickshell.shellPath("Scripts/Updater.sh")
+
+    // Icons
+    readonly property string    bar_updater_icon:           "\uf303"    // Updater's arch icon
     readonly property string    power_menu_lock_icon:       "\uf023"    // Power menu's lock icon
     readonly property string    power_menu_suspend_icon:    "\uf186"    // Power menu's suspend icon
     readonly property string    power_menu_logout_icon:     "\uf2f5"    // Power menu's log out icon

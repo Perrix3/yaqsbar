@@ -95,18 +95,8 @@ Rectangle {
         }
 
         // divider: collapses to nothing when there are no specials 
-        Item {
-            width:   Settings.bar_widget_width
-            height:  Settings.bar_ws_divider_height
+        BarDivider {
             visible: specialModel.values.length > 0
-
-            Rectangle {
-                anchors.centerIn: parent
-                width:   parent.width * 0.6
-                height:  1
-                color:   Colors.col_main
-                opacity: 0.3
-            }
         }
 
         // Normal workspaces
