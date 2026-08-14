@@ -14,6 +14,7 @@ Variants {
 
     property string panelName: ""
     property bool modal: true
+    property bool dim: true
     default property Component contentComponent
 
     LazyLoader {
@@ -51,7 +52,7 @@ Variants {
             Rectangle {
                 anchors.fill: parent
                 visible: root.modal
-                color: Settings.panel_dim 
+                color: root.dim && Settings.panel_dim 
                         ? Qt.rgba(0, 0, 0, Settings.overlay_dim_opacity)
                         : "transparent"
 

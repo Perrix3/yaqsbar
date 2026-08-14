@@ -9,13 +9,17 @@ Singleton {
     readonly property var widgets: ({
         "archupdates":  updaterComp,
         "workspaces":   workspacesComp,
+        "dashboard":    dashboardComp,
         "clock":        clockComp,
         "power":        powerComp,
     })
 
     property Component updaterComp:     Component { ArchUpdates {} }
     property Component workspacesComp:  Component { Workspaces {} }
-    property Component powerComp:       Component { Power {} }
+
+    property Component dashboardComp:   Component { DashboardButton {} }
+
+    property Component powerComp:       Component { PowerButton {} }
     property Component clockComp:       Component { Clock {} }
 
 }

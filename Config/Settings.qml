@@ -16,7 +16,7 @@ Singleton {
 
     // Bar widgets and order, divided in 3 sections
     readonly property var   bar_widgets_start:  ["archupdates", "workspaces"]
-    readonly property var   bar_widgets_center: [""]
+    readonly property var   bar_widgets_center: ["dashboard"]
     readonly property var   bar_widgets_end:    ["clock", "power"]
 
     // Bar settings
@@ -64,7 +64,7 @@ Singleton {
     readonly property int       power_action_icon_size:     28          // Power menu action icon size
 
     // Updater
-    readonly property int       update_poll_interval:  1800000             // 30 min
+    readonly property int       update_poll_interval:  1800000              // 30 min
     readonly property bool      update_pacman:          true                // Update pacman with script
     readonly property bool      update_aur:             true                // Update aur with script
     readonly property bool      update_flatpak:         true                // Update flatpak with script
@@ -79,4 +79,12 @@ Singleton {
     readonly property string    power_menu_logout_icon:     "\uf2f5"    // Power menu's log out icon
     readonly property string    power_menu_reboot_icon:     "\uf021"    // Power menu's reboot icon
     readonly property string    power_menu_shutdown_icon:   "\uf011"    // Power menu's shut down icon
+    readonly property string    bar_dashboard_icon:         "\uf0c9"    // Dashboard's bar icon
+
+    // Dashboard
+    readonly property int   dashboard_height:               400     // Dashboard panel height
+    readonly property int   dashboard_width:                600     // Dashboard panel width
+    readonly property int   dashboard_radius:               15      // Dashboard panel radius (rounder edges)
+    readonly property bool  dashboard_close_on_click_away:  true    // Close dashboard when clicking away from it
+    readonly property bool  dashboard_dim_background:       false   // Dim screens when dashboard is open (needs close on click away to be true)
 }
