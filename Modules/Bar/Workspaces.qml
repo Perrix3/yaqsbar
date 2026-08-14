@@ -16,8 +16,9 @@ Rectangle {
     color: Colors.col_background2
     radius: Settings.bar_widget_radius
 
-    property var hoveredItem: null
-    property var shownItem: null
+    property var    hoveredItem: null   // identity only — never given to a PopupWindow
+    property string hoverLabel:  ""
+    property real   hoverY:      0
 
     readonly property string openSpecial: monitor?.lastIpcObject?.specialWorkspace?.name ?? ""
 
@@ -30,21 +31,19 @@ Rectangle {
     }
 
     function trackHover(item, isHovered) {
-        if (isHovered)
+        if (isHovered) {
             root.hoveredItem = item;
-        else if (root.hoveredItem === item)
+            root.hoverLabel  = root.wsLabel(item.ws);
+            root.hoverY      = item.mapToItem(root, 0, item.height / 2).y;
+        } else if (root.hoveredItem === item) {
             root.hoveredItem = null;
+        }
     }
 
     function releaseItem(item) {
         if (root.hoveredItem === item)
             root.hoveredItem = null;
-        if (root.shownItem === item)
-            root.shownItem = null;
     }
-
-    onHoveredItemChanged: if (hoveredItem)
-        shownItem = hoveredItem;
 
     ScriptModel {
         id: specialModel
@@ -127,14 +126,15 @@ Rectangle {
 
     BarPopup {
         id: tooltip
-        anchorItem: root.shownItem
-        visible:    root.hoveredItem !== null
+        anchorItem:    root
+        anchorOffsetY: root.hoverY
+        visible:       root.hoveredItem !== null
 
         Text {
             color:          Colors.col_main
             font.family:    Settings.bar_widget_font
             font.pixelSize: Settings.bar_widget_font_size
-            text:           root.wsLabel(root.shownItem?.ws)
+            text:           root.hoverLabel
         }
     }
 
