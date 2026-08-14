@@ -13,6 +13,7 @@ Singleton {
     readonly property int       bar_popup_border_width: 1                           // Popup's border width
     readonly property bool      panel_dim:              true                        // Dim background when panel is open
     readonly property real      overlay_dim_opacity:    0.5                         // Overlay panel background dim
+    readonly property string    color_theme:            "latte"                     // Colour themes (currently cattpuccin 'frappe' 'latte' 'mocha' 'macchiato')
 
     // Bar widgets and order, divided in 3 sections
     readonly property var   bar_widgets_start:  ["archupdates", "workspaces"]
@@ -82,9 +83,12 @@ Singleton {
     readonly property string    bar_dashboard_icon:         "\uf0c9"    // Dashboard's bar icon
 
     // Dashboard
-    readonly property int   dashboard_height:               400     // Dashboard panel height
+    readonly property int   dashboard_height:               750     // Dashboard panel height
     readonly property int   dashboard_width:                600     // Dashboard panel width
     readonly property int   dashboard_radius:               15      // Dashboard panel radius (rounder edges)
-    readonly property bool  dashboard_close_on_click_away:  true    // Close dashboard when clicking away from it
+    readonly property bool  dashboard_close_on_click_away:  false    // Close dashboard when clicking away from it
     readonly property bool  dashboard_dim_background:       false   // Dim screens when dashboard is open (needs close on click away to be true)
+    readonly property int   dashboard_padding:              5
+    readonly property int   dashboard_card_radius:          15
+    readonly property int   dashboard_spacing:              5
 }

@@ -13,7 +13,7 @@ Rectangle {
 
     implicitWidth: Settings.bar_width
     implicitHeight: col.implicitHeight + 5
-    color: Colors.col_background2
+    color: "transparent"    // was col_background2 — on Latte that grey block dominated the bar
     radius: Settings.bar_widget_radius
 
     property var    hoveredItem: null   // identity only — never given to a PopupWindow
@@ -76,10 +76,10 @@ Rectangle {
                 readonly property var  ws:     modelData
                 readonly property bool isOpen: root.openSpecial === ws.name
 
-                radius:    Settings.bar_ws_widget_radius
-                color:     isOpen ? Colors.col_main : "transparent"
-                textColor: isOpen ? Colors.col_background2 : Colors.col_main
-                text:      Settings.bar_ws_widget_special_icon
+                radius: Settings.bar_ws_widget_radius
+                accent: Colors.col_workspaces
+                active: isOpen
+                text:   Settings.bar_ws_widget_special_icon
 
                 onClicked: {
                     const special = ws.name.slice(8);
@@ -111,9 +111,9 @@ Rectangle {
                 readonly property bool isActive: ws.active
                 readonly property bool isUrgent: ws.urgent
                 
-                color:      isActive ? Colors.col_main : "transparent"
-                radius:     Settings.bar_ws_widget_radius
-                textColor:  isActive ? Colors.col_background2 : Colors.col_main
+                radius: Settings.bar_ws_widget_radius
+                accent: isUrgent ? Colors.col_error : Colors.col_workspaces
+                active: isActive
                 text: isUrgent ? Settings.bar_ws_widget_urgent_icon : isActive ? Settings.bar_ws_widget_active_icon : Settings.bar_ws_widget_normal_icon
 
                 onClicked: ws.activate()

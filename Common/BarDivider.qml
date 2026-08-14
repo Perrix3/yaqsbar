@@ -9,7 +9,6 @@ Item {
     anchors.centerIn: parent
     width:   parent.width * 0.6
     height:  1
-    color:   Colors.col_main
-    opacity: 0.3
+    color:   Colors.col_border2
     }
 }

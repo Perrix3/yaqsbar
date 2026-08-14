@@ -9,7 +9,8 @@ Rectangle {
     property string text: ""
     property bool active: false
     property bool expanded: false
-    property color textColor: Colors.col_main
+    property color accent: Colors.col_highlight // widget's identity colour
+    property color textColor: root.accent
     readonly property bool hovered: mouseArea.containsMouse
 
     signal clicked()
@@ -19,8 +20,12 @@ Rectangle {
     implicitWidth:  Settings.bar_widget_width
     implicitHeight: Settings.bar_widget_height
     radius:         Settings.bar_widget_radius
-    
-    color: Colors.col_background2
+
+    color: root.active  ? Colors.activeBg(root.accent)
+         : root.hovered ? Colors.hoverBg(root.accent)
+         :                "transparent"
+
+    Behavior on color { ColorAnimation { duration: 120 } }
 
     IconText {
         id: label

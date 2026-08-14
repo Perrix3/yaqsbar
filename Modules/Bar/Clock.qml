@@ -20,16 +20,19 @@ Item {
 
         StyledText {
             text: Time.hours
+            color: Colors.col_clock
             font.pixelSize: Settings.bar_clock_font_size
         }
 
         StyledText {
             text: Time.minutes
+            color: Colors.col_clock
             font.pixelSize: Settings.bar_clock_font_size
         }
 
         StyledText {
             text: Time.suffix
+            color: Colors.col_clock
             font.pixelSize: Settings.bar_clock_suffix_font_size
             visible: text !== ""          // collapses entirely in 24h mode
         }

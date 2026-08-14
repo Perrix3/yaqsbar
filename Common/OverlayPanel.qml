@@ -46,7 +46,7 @@ Variants {
 
             Region {
                 id: contentMask
-                item: contentLoader.item?.children[0] ?? null
+                item: contentLoader.item?.maskItem ?? contentLoader.item?.children[0] ?? null
             }
 
             Rectangle {

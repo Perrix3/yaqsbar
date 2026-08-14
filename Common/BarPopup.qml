@@ -29,7 +29,7 @@ PopupWindow {
         color:  Colors.col_background2
         radius: Settings.bar_popup_radius
 
-        border.color: Colors.col_main        
+        border.color: Colors.col_border
         border.width: Settings.bar_popup_border_width
 
         Item {

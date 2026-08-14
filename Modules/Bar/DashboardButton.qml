@@ -17,9 +17,12 @@ Item {
 
         readonly property bool isOpen: Panels.isOpen("dashboard", root.monitor?.name ?? "")
 
-        text:      Settings.bar_dashboard_icon
-        color:     isOpen ? Colors.col_main : Colors.col_background2
-        textColor: isOpen ? Colors.col_background2 : Colors.col_main
+        implicitWidth:  Settings.bar_widget_width + 5
+        implicitHeight: Settings.bar_widget_height + 5
+
+        text:   Settings.bar_dashboard_icon
+        accent: Colors.col_dashboard
+        active: isOpen
 
         onClicked: Panels.toggle("dashboard", root.monitor?.name ?? "", root.mapToItem(null, 0, root.height / 2).y)
     }

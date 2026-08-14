@@ -4,18 +4,43 @@ import Quickshell
 import QtQuick
 
 Singleton {
-    property color col_background: '#FDF7F4'
-    property color col_background2: '#F8E8E7'
+    // Active theme
+    readonly property var pal: Themes.flavors[Settings.color_theme] ?? Themes.mocha
 
-    //property color col_border: ''
-    //property color col_border2: ''
+    // Neutrals
+    readonly property color col_background:     pal.base        // bar, dashboard, power menu
+    readonly property color col_background2:    pal.surface0    // popups and other elevated surfaces
+    readonly property color col_border:         pal.surface1    // popup borders
+    readonly property color col_border2:        pal.surface2    // dividers
 
-    //property color col_highlight: ''
-    //property color col_highlight2: ''
-    
-    property color col_main: '#825449'
-    //property color col_secondary: ''
+    // Text
+    readonly property color col_main:           pal.text        // Texts
+    readonly property color col_secondary:      pal.subtext0    // secondary labels
 
-    property color col_red: '#ff0000'
-    property color col_yellow: '#ffd900'
+    // Widget identity
+    readonly property color col_workspaces:     pal.green
+    readonly property color col_clock:          pal.blue
+    readonly property color col_updates:        pal.peach
+    readonly property color col_dashboard:      pal.lavender
+    readonly property color col_power:          pal.red
+
+    // Status
+    readonly property color col_error:          pal.red
+    readonly property color col_warning:        pal.yellow
+    readonly property color col_success:        pal.green
+
+    // Generic accent
+    readonly property color col_highlight:      pal.mauve
+    readonly property color col_highlight2:     hoverBg(col_highlight)
+    readonly property color col_on_highlight:   pal.base
+
+    function tintBg(c: color, amount: real): color {
+        return Qt.tint(pal.base, Qt.rgba(c.r, c.g, c.b, amount));
+    }
+    function hoverBg(c: color): color {
+        return tintBg(c, 0.15);
+    }
+    function activeBg(c: color): color {
+        return tintBg(c, 0.30);
+    }
 }
