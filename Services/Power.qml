@@ -8,18 +8,6 @@ import qs.Strings
 Singleton {
     id: root
 
-    property bool menuOpen:     false
-    property string menuScreen: ""      // Which screen
-
-    function openMenu(screenName) {
-        root.menuScreen = screenName;
-        root.menuOpen = true;
-    }
-
-    function closeMenu() {
-        root.menuOpen = false;
-    }
-
     readonly property var actions: [
         { label: Strings.power_menu_lock_text,      icon: Settings.power_menu_lock_icon,        command: ["hyprlock"] },
         { label: Strings.power_menu_suspend_text,   icon: Settings.power_menu_suspend_icon,     command: ["systemctl", "suspend"] },

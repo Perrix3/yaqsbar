@@ -15,14 +15,12 @@ Item {
     BarWidgetButton {
         id: button
 
-        readonly property bool isOpen: Power.menuOpen && Power.menuScreen === root.monitor?.name
+        readonly property bool isOpen: Panels.isOpen("power", root.monitor?.name ?? "")
 
         text:      Settings.bar_power_icon
         color:     isOpen ? Colors.col_main : Colors.col_background2
         textColor: isOpen ? Colors.col_background2 : Colors.col_main
 
-        onClicked: Power.menuOpen
-            ? Power.closeMenu()
-            : Power.openMenu(root.monitor?.name ?? "")
+        onClicked: Panels.toggle("power", root.monitor?.name ?? "")
     }
 }

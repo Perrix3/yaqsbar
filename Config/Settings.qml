@@ -11,8 +11,9 @@ Singleton {
     readonly property int       font_size_icon:         12                          // Icon font size
     readonly property string    locale:                 "en_GB"                     // Locale used by time and later on, language
     readonly property int       bar_popup_border_width: 1                           // Popup's border width
+    readonly property bool      panel_dim:              true                        // Dim background when panel is open
+    readonly property real      overlay_dim_opacity:    0.5                         // Overlay panel background dim
 
-    
     // Bar widgets and order, divided in 3 sections
     readonly property var   bar_widgets_start:  ["archupdates", "workspaces"]
     readonly property var   bar_widgets_center: [""]
@@ -63,13 +64,13 @@ Singleton {
     readonly property int       power_action_icon_size:     28          // Power menu action icon size
 
     // Updater
-    readonly property int       updates_poll_interval:  1800000             // 30 min
+    readonly property int       update_poll_interval:  1800000             // 30 min
     readonly property bool      update_pacman:          true                // Update pacman with script
     readonly property bool      update_aur:             true                // Update aur with script
     readonly property bool      update_flatpak:         true                // Update flatpak with script
     readonly property bool      update_no_confirm:      true                // Use no-confirm on update script
     readonly property var       update_terminal:        ["kitty", "--"]     // Terminal that runs the script
-    readonly property string    update_script:         Quickshell.shellPath("Scripts/Updater.sh")
+    readonly property string    update_script:          Quickshell.shellPath("Scripts/Updater.sh")
 
     // Icons
     readonly property string    bar_updater_icon:           "\uf303"    // Updater's arch icon

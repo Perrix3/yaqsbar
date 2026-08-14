@@ -92,7 +92,7 @@ Singleton {
 
     Timer {
         id: poll
-        interval: Settings.updates_poll_interval
+        interval: Settings.update_poll_interval
         running: true
         repeat: true
         triggeredOnStart: true
