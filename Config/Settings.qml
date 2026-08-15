@@ -14,6 +14,7 @@ Singleton {
     readonly property bool      panel_dim:              true                        // Dim background when panel is open
     readonly property real      overlay_dim_opacity:    0.5                         // Overlay panel background dim
     readonly property string    color_theme:            "latte"                     // Colour themes (currently cattpuccin 'frappe' 'latte' 'mocha' 'macchiato')
+    readonly property string    user_avatar:            ""                          // User avatar
 
     // Bar widgets and order, divided in 3 sections
     readonly property var   bar_widgets_start:  ["archupdates", "workspaces"]
@@ -83,12 +84,18 @@ Singleton {
     readonly property string    bar_dashboard_icon:         "\uf0c9"    // Dashboard's bar icon
 
     // Dashboard
-    readonly property int   dashboard_height:               750     // Dashboard panel height
-    readonly property int   dashboard_width:                600     // Dashboard panel width
-    readonly property int   dashboard_radius:               15      // Dashboard panel radius (rounder edges)
-    readonly property bool  dashboard_close_on_click_away:  false    // Close dashboard when clicking away from it
-    readonly property bool  dashboard_dim_background:       false   // Dim screens when dashboard is open (needs close on click away to be true)
-    readonly property int   dashboard_padding:              5
-    readonly property int   dashboard_card_radius:          15
-    readonly property int   dashboard_spacing:              5
+    readonly property int   dashboard_height:                   750     // Dashboard panel height
+    readonly property int   dashboard_width:                    600     // Dashboard panel width
+    readonly property int   dashboard_radius:                   15      // Dashboard panel radius (rounder edges)
+    readonly property bool  dashboard_close_on_click_away:      false   // Close dashboard when clicking away from it
+    readonly property bool  dashboard_dim_background:           false   // Dim screens when dashboard is open (needs close on click away to be true)
+    readonly property int   dashboard_padding:                  5       // Dashboard's padding
+    readonly property int   dashboard_card_radius:              15      // Dashboard card's radius
+    readonly property int   dashboard_spacing:                  5       // Dashboard's spacing
+    readonly property int   dashboard_time_font_size:           50      // Dashboard home clock's size
+    readonly property int   dashboard_timezone_font_size:       14      // Dashboard timezone's font size
+    readonly property int   dashboard_date_font_size:           20      // Dashboard home date's font size
+    readonly property int   dashboard_avatar_size:              130     // Dashboard header avatar size
+    readonly property int   dashboard_username_size:            20      // Dashboard header username font size
+    
 }
