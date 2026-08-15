@@ -36,6 +36,7 @@ ColumnLayout {
         Card {
             Layout.preferredWidth: 190
             Layout.fillHeight: true
+            border.color: Colors.col_clock_card
             ColumnLayout {
                 anchors.centerIn: parent
                 width: parent.width
@@ -46,7 +47,7 @@ ColumnLayout {
                     Layout.fillWidth: true
                     horizontalAlignment: Text.AlignHCenter
                     text: Time.time
-                    color: Colors.col_clock
+                    color: Colors.col_clock_card
                     font.pixelSize: Settings.dashboard_time_font_size
                 }
                 // Timezone UTC
@@ -54,7 +55,7 @@ ColumnLayout {
                     Layout.fillWidth: true
                     horizontalAlignment: Text.AlignHCenter
                     text: Time.timezone
-                    color: Colors.col_clock
+                    color: Colors.col_clock_card
                     font.pixelSize: Settings.dashboard_timezone_font_size
                 }
                 // Date
@@ -62,7 +63,7 @@ ColumnLayout {
                     Layout.fillWidth: true
                     horizontalAlignment: Text.AlignHCenter
                     text: Time.short_date
-                    color: Colors.col_clock
+                    color: Colors.col_clock_card
                     font.pixelSize: Settings.dashboard_date_font_size
                 }
             }

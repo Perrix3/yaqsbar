@@ -17,12 +17,20 @@ Singleton {
     readonly property color col_main:           pal.text        // Texts
     readonly property color col_secondary:      pal.subtext0    // secondary labels
 
+    // Window borders + bar border
+    readonly property color col_accent: pal.mauve
+
     // Widget identity
     readonly property color col_workspaces:     pal.green
     readonly property color col_clock:          pal.blue
     readonly property color col_updates:        pal.peach
     readonly property color col_dashboard:      pal.lavender
     readonly property color col_power:          pal.red
+
+    // Dashboard identity
+    readonly property color col_sysinfo:    pal.flamingo
+    readonly property color col_avatar:     pal.maroon
+    readonly property color col_clock_card: pal.blue
 
     // Status
     readonly property color col_error:          pal.red

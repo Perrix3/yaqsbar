@@ -29,8 +29,8 @@ PopupWindow {
         color:  Colors.col_background2
         radius: Settings.bar_popup_radius
 
-        border.color: Colors.col_border
-        border.width: Settings.bar_popup_border_width
+        border.width:   Settings.general_border_width
+        border.color:   Colors.col_accent
 
         Item {
             id: body

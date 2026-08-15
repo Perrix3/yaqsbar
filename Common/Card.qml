@@ -8,6 +8,8 @@ Rectangle {
 
     color:  Colors.col_background2
     radius: Settings.dashboard_card_radius
+    border.width: Settings.dashboard_panel_border_width
+    border.color: Colors.col_border
 
     Item {
         id: body

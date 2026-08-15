@@ -20,6 +20,32 @@ Variants {
         implicitWidth: Settings.bar_width
         color: Colors.col_background
 
+        // Bar border, only shows on the free edge
+        Rectangle {
+            anchors {left: parent.left; right: parent.right; top: parent.top}
+            height: Settings.general_border_width
+            color:   Colors.col_accent
+            visible: !Settings.bar_anchor_top
+        }
+        Rectangle {
+            anchors {left: parent.left; right: parent.right; bottom: parent.bottom}
+            height: Settings.general_border_width
+            color:   Colors.col_accent
+            visible: !Settings.bar_anchor_bottom
+        }
+        Rectangle {
+            anchors {left: parent.left; top: parent.top; bottom: parent.bottom}
+            width: Settings.general_border_width
+            color:   Colors.col_accent
+            visible: !Settings.bar_anchor_left
+        }
+        Rectangle {
+            anchors {right: parent.right; top: parent.top; bottom: parent.bottom}
+            width: Settings.general_border_width
+            color:   Colors.col_accent
+            visible: !Settings.bar_anchor_right
+        }
+
         BarSection {
             anchors { top: parent.top; topMargin: Settings.bar_padding_start; horizontalCenter: parent.horizontalCenter }
             widgets: Settings.bar_widgets_start

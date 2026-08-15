@@ -13,6 +13,9 @@ OverlayPanel {
             radius: Settings.bar_popup_radius
             color: Colors.col_background
 
+            border.width:   Settings.general_border_width
+            border.color:   Colors.col_accent
+
             Row {
                 id: actions
                 anchors.centerIn: parent

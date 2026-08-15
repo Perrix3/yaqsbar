@@ -19,6 +19,8 @@ OverlayPanel {
 
             implicitWidth:  Settings.dashboard_width
             implicitHeight: Settings.dashboard_height
+            border.width:   Settings.general_border_width
+            border.color:   Colors.col_accent
 
             x: Settings.bar_popup_gap
             y: Math.max(Settings.bar_popup_gap, Math.min(parent.height - height - Settings.bar_popup_gap, Panels.anchorY - height / 2))

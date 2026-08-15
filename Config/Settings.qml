@@ -15,6 +15,7 @@ Singleton {
     readonly property real      overlay_dim_opacity:    0.5                         // Overlay panel background dim
     readonly property string    color_theme:            "latte"                     // Colour themes (currently cattpuccin 'frappe' 'latte' 'mocha' 'macchiato')
     readonly property string    user_avatar:            ""                          // User avatar
+    readonly property int       general_border_width:   3                           // General border width
 
     // Bar widgets and order, divided in 3 sections
     readonly property var   bar_widgets_start:  ["archupdates", "workspaces"]
@@ -84,18 +85,26 @@ Singleton {
     readonly property string    bar_dashboard_icon:         "\uf0c9"    // Dashboard's bar icon
 
     // Dashboard
-    readonly property int   dashboard_height:                   750     // Dashboard panel height
-    readonly property int   dashboard_width:                    600     // Dashboard panel width
-    readonly property int   dashboard_radius:                   15      // Dashboard panel radius (rounder edges)
-    readonly property bool  dashboard_close_on_click_away:      false   // Close dashboard when clicking away from it
-    readonly property bool  dashboard_dim_background:           false   // Dim screens when dashboard is open (needs close on click away to be true)
-    readonly property int   dashboard_padding:                  5       // Dashboard's padding
-    readonly property int   dashboard_card_radius:              15      // Dashboard card's radius
-    readonly property int   dashboard_spacing:                  5       // Dashboard's spacing
-    readonly property int   dashboard_time_font_size:           50      // Dashboard home clock's size
-    readonly property int   dashboard_timezone_font_size:       14      // Dashboard timezone's font size
-    readonly property int   dashboard_date_font_size:           20      // Dashboard home date's font size
-    readonly property int   dashboard_avatar_size:              130     // Dashboard header avatar size
-    readonly property int   dashboard_username_size:            20      // Dashboard header username font size
-    
+    readonly property int       dashboard_height:                   750         // Dashboard panel height
+    readonly property int       dashboard_width:                    600         // Dashboard panel width
+    readonly property int       dashboard_radius:                   15          // Dashboard panel radius (rounder edges)
+    readonly property bool      dashboard_close_on_click_away:      false       // Close dashboard when clicking away from it
+    readonly property bool      dashboard_dim_background:           false       // Dim screens when dashboard is open (needs close on click away to be true)
+    readonly property int       dashboard_padding:                  5           // Dashboard's padding
+    readonly property int       dashboard_card_radius:              15          // Dashboard card's radius
+    readonly property int       dashboard_spacing:                  5           // Dashboard's spacing
+    readonly property int       dashboard_time_font_size:           50          // Dashboard home clock's size
+    readonly property int       dashboard_timezone_font_size:       14          // Dashboard timezone's font size
+    readonly property int       dashboard_date_font_size:           20          // Dashboard home date's font size
+    readonly property int       dashboard_avatar_size:              130         // Dashboard header avatar size
+    readonly property int       dashboard_username_size:            20          // Dashboard header username font size
+    readonly property int       dashboard_info_spacing:             4           // Dashboard sysinfo spacing
+    readonly property int       dashboard_info_icon_width:          18          // Dashboard sysinfo icon size
+    readonly property int       dashboard_panel_border_width:       2           // Dashboard panel border width
+    readonly property int       sysinfo_font_size:                  17          // Dashboard sysinfo font size
+    readonly property string    sysinfo_kernel_icon:                "\uf17c"    // Dashboard sysinfo kernel icon
+    readonly property string    sysinfo_wm_icon:                    "\uf2d0"    // Dashboard sysinfo wm icon
+    readonly property string    sysinfo_pkg_icon:                   "\uf487"    // Dashboard sysinfo pkg icon
+    readonly property string    sysinfo_uptime_icon:                "\uf017"    // Dashboard sysinfo uptime icon
+    readonly property string    sysinfo_fallback_icon:              "\uf007"    // Dashboard sysinfo fallback icon
 }
