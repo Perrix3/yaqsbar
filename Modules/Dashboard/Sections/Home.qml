@@ -3,6 +3,7 @@ import QtQuick.Layouts
 import qs.Config
 import qs.Common
 import qs.Services
+import qs.Modules.Dashboard
 
 // Home section for the dashboard, landing page when opening
 ColumnLayout {
@@ -10,7 +11,7 @@ ColumnLayout {
 
     Card {
         Layout.fillWidth: true 
-        Layout.preferredHeight: 90
+        Layout.preferredHeight: Settings.dashboard_home_section1_height
         StyledText {
             anchors.centerIn: parent
             text: "buttons (wifi, bluetooth...)"
@@ -19,28 +20,24 @@ ColumnLayout {
 
     RowLayout {
         Layout.fillWidth: true
-        Layout.preferredHeight: 125
+        Layout.preferredHeight: Settings.dashboard_home_section2_height
         Layout.fillHeight: false
         spacing: Settings.dashboard_spacing
 
-        Card {
+        MediaPlayer {
             Layout.fillWidth: true
             Layout.fillHeight: true
-            StyledText {
-                anchors.centerIn: parent
-                text: "media (MPRIS)"
-            }
         }
 
         // Clock
         Card {
-            Layout.preferredWidth: 190
+            Layout.preferredWidth: Settings.dashboard_home_clock_width
             Layout.fillHeight: true
             border.color: Colors.col_clock_card
             ColumnLayout {
                 anchors.centerIn: parent
                 width: parent.width
-                spacing: 2
+                spacing: Settings.dashboard_home_clock_spacing
 
                 // Time
                 StyledText {

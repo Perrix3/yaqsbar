@@ -10,6 +10,7 @@ Singleton {
     // Neutrals
     readonly property color col_background:     pal.base        // bar, dashboard, power menu
     readonly property color col_background2:    pal.surface0    // popups and other elevated surfaces
+    readonly property color col_background3:    pal.surface1
     readonly property color col_border:         pal.surface1    // popup borders
     readonly property color col_border2:        pal.surface2    // dividers
 
@@ -31,6 +32,7 @@ Singleton {
     readonly property color col_sysinfo:    pal.flamingo
     readonly property color col_avatar:     pal.maroon
     readonly property color col_clock_card: pal.blue
+    readonly property color col_media:      pal.pink
 
     // Status
     readonly property color col_error:          pal.red

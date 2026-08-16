@@ -93,6 +93,10 @@ Singleton {
     readonly property int       dashboard_padding:                  5           // Dashboard's padding
     readonly property int       dashboard_card_radius:              15          // Dashboard card's radius
     readonly property int       dashboard_spacing:                  5           // Dashboard's spacing
+    readonly property int       dashboard_home_section1_height:     100         // Dashboard home section 1 (buttons) height (height fights with section 3)
+    readonly property int       dashboard_home_section2_height:     130         // Dashboard home section 2 (media and clock) height (height fights with section 3)
+    readonly property int       dashboard_home_clock_width:         190         // Dashboard home clock width (fights for with with media)
+    readonly property int       dashboard_home_clock_spacing:       2           // Dashboard home clock's spacing
     readonly property int       dashboard_time_font_size:           50          // Dashboard home clock's size
     readonly property int       dashboard_timezone_font_size:       14          // Dashboard timezone's font size
     readonly property int       dashboard_date_font_size:           20          // Dashboard home date's font size
@@ -107,4 +111,28 @@ Singleton {
     readonly property string    sysinfo_pkg_icon:                   "\uf487"    // Dashboard sysinfo pkg icon
     readonly property string    sysinfo_uptime_icon:                "\uf017"    // Dashboard sysinfo uptime icon
     readonly property string    sysinfo_fallback_icon:              "\uf007"    // Dashboard sysinfo fallback icon
+
+    // Dashboard Media
+    readonly property string    media_follow_app:           "spotify"       // Player to follow (leave as "" for auto)
+    readonly property var       media_exclude_apps:         ["kdeconnect"]  // Ignored players (leave empty for none)
+    readonly property int       media_position_interval:    500             // Position interval
+    readonly property int       media_button_size:          24              // Button size
+    readonly property int       media_button_spacing:       6               // Button spacing
+    readonly property int       media_progress_height:      4               // Progress bar height
+    readonly property int       media_app_font_size:        10              // App name font size
+    readonly property int       media_title_font_size:      16              // Title font size
+    readonly property int       media_album_font_size:      14              // Album + artist font size
+    readonly property int       media_time_font_size:       14              // Media time font size
+    readonly property string    media_shuffle_icon:         "\uf074"        // Shuffle icon
+    readonly property string    media_prev_icon:            "\uf048"        // Previous icon
+    readonly property string    media_play_icon:            "\uf04b"        // Play icon
+    readonly property string    media_pause_icon:           "\uf04c"        // Pause icon
+    readonly property string    media_next_icon:            "\uf051"        // Next icon
+    readonly property string    media_loop_off_icon:        "\u{f0457}"     // Loop off icon
+    readonly property string    media_loop_all_icon:        "\u{f0456}"     // Loop all icon
+    readonly property string    media_loop_one_icon:        "\u{f0458}"     // Loop one icon
+    readonly property string    media_placeholder_icon:     "\uf001"        // Placeholder icon
+    readonly property int       media_handle_size:          10              // Progress bar slider handle size
+    readonly property int       media_sliding_delay:        1500            // Sliding text animation delay
+    readonly property real      media_sliding_speed:        25              // Sliding text animation speed
 }

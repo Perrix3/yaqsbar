@@ -27,5 +27,6 @@ Singleton {
     readonly property string updates_failed:    "error"                 // per-source check failure
 
     // Dashboard
-    readonly property string sysinfo_packages:  "packages"  // Packages
+    readonly property string sysinfo_packages:  "packages"          // Packages
+    readonly property string media_idle:        "Nothing playing"   // Nothing playing
 }
