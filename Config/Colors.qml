@@ -33,11 +33,14 @@ Singleton {
     readonly property color col_avatar:     pal.maroon
     readonly property color col_clock_card: pal.blue
     readonly property color col_media:      pal.pink
+    readonly property color col_weather:    pal.sapphire
 
     // Status
     readonly property color col_error:          pal.red
     readonly property color col_warning:        pal.yellow
     readonly property color col_success:        pal.green
+    readonly property color col_cold:           pal.sapphire
+    readonly property color col_hot:            pal.peach
 
     // Generic accent
     readonly property color col_highlight:      pal.mauve

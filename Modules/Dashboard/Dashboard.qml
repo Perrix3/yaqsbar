@@ -53,9 +53,9 @@ OverlayPanel {
 
                     // Tab sections
                     Home {}
-                    //Calendar {}
-                    //Weather {}
-                    //System {}
+                    Item {} //Calendar {}
+                    WeatherSection {}
+                    Item {} //System {}
                 }
             }
         }

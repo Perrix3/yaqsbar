@@ -125,14 +125,10 @@ RowLayout {
         }
     }
 
-    Card {
+    // Current weather
+    WeatherCard {
         Layout.preferredWidth: 170
         Layout.fillHeight: true
-        
-        StyledText {
-            anchors.centerIn: parent
-            text: "weather"
-        }
     }
 
     BarWidgetButton {

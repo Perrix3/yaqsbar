@@ -29,4 +29,23 @@ Singleton {
     // Dashboard
     readonly property string sysinfo_packages:  "packages"          // Packages
     readonly property string media_idle:        "Nothing playing"   // Nothing playing
+
+    // Weather
+    readonly property string weather_error:             "Unavailable"       // Unavailable
+    readonly property string weather_never:             "Never updated"     // Never updated
+    readonly property string weather_updated_prefix:    "Updated"           // Updated
+    readonly property string weather_time_format:       "hh:mm"             // Weather time format
+    readonly property string weather_now:               "Now"               // Now
+    readonly property string weather_today:             "Today"             // Today
+    readonly property string weather_loading:           "Loading..."        // Loading
+    readonly property string weather_unavailable:       "No forecast data"  // No forecast data
+    readonly property string weather_wind_suffix:       "km/h"              // Wind speed suffix
+    readonly property string weather_hour_format:       "hh"                // Hour format
+    readonly property string weather_day_format:        "ddd"               // Day format
+    readonly property string weather_sun_format:        "hh:mm"             // Sun time format
+    readonly property string weather_feels_label:       "Feels like"        // Feelslike
+    readonly property string weather_humidity_label:    "Humidity"          // Humidity
+    readonly property string weather_wind_label:        "Wind"              // Wind
+    readonly property string weather_sunrise_label:     "Sunrise"           // Sunrise
+    readonly property string weather_sunset_label:      "Sunset"            // Sunset
 }

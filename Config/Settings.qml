@@ -69,7 +69,7 @@ Singleton {
     // Updater
     readonly property int       update_poll_interval:  1800000              // 30 min
     readonly property bool      update_pacman:          true                // Update pacman with script
-    readonly property bool      update_aur:             true                // Update aur with script
+    readonly property bool      update_aur:             false                // Update aur with script
     readonly property bool      update_flatpak:         true                // Update flatpak with script
     readonly property bool      update_no_confirm:      true                // Use no-confirm on update script
     readonly property var       update_terminal:        ["kitty", "--"]     // Terminal that runs the script
@@ -135,4 +135,46 @@ Singleton {
     readonly property int       media_handle_size:          10              // Progress bar slider handle size
     readonly property int       media_sliding_delay:        1500            // Sliding text animation delay
     readonly property real      media_sliding_speed:        25              // Sliding text animation speed
+
+    // Weather
+    readonly property string    weather_city:               "Seville"   // Location for weather
+    readonly property string    weather_language:           "en"        // Language for weather
+    readonly property real      weather_latitude:           0           // Latitude for weather (leave as 0 for auto check with city)
+    readonly property real      weather_longitude:          0           // Longitude for weather (leave as 0 for auto check with city)
+    readonly property string    weather_unit:               "celsius"   // Degree unit
+    readonly property string    weather_wind_unit:          "kmh"       // Speed unit
+    readonly property int       weather_forecast_days:      7           // Forecast days
+    readonly property int       weather_poll_interval:      900000      // Weather poll interval
+    readonly property int       weather_retry_interval:     60000       // Retry interval
+    readonly property int       weather_timeout:            10          // Timeout
+    readonly property int       weather_temp_font_size:     44          // Temperatur font size
+    readonly property int       weather_unit_font_size:     18          // Degree unit font size
+    readonly property int       weather_icon_font_size:     64          // Weather icon font size
+    readonly property int       weather_small_font_size:    12          // Small font size
+    readonly property int       weather_spacing:            4           // Weather spacing
+    readonly property int       weather_icon_spacing:       6           // Weather icon spacing
+    readonly property string    weather_reload_icon:        "\uf021"    // Reload icon
+    readonly property string    weather_rain_icon:          "\uf043"    // Rain icon
+    readonly property int       weather_now_height:         95          // 'Now' section height
+    readonly property int       weather_hourly_height:      140         // 'Hourly' section height
+    readonly property int       weather_hourly_count:       8           // Next hours forecast to show
+    readonly property int       weather_hour_width:         52          // 'Hourly' section width
+    readonly property int       weather_hour_spacing:       4           // 'Hourly' section spacing
+    readonly property int       weather_detail_font_size:   14          // 'Detail' section font size
+    readonly property int       weather_detail_icon_size:   20          // 'Detail' section icon size
+    readonly property int       weather_hour_font_size:     15          // Hour font size
+    readonly property int       weather_hour_icon_size:     30          // Hour icon size
+    readonly property int       weather_day_font_size:      14          // Day font size
+    readonly property int       weather_day_icon_size:      20          // Day icon size
+    readonly property int       weather_day_name_width:     46          // Day name width
+    readonly property int       weather_day_rain_width:     40          // Day rain width
+    readonly property int       weather_day_temp_width:     34          // Day temperature width
+    readonly property int       weather_range_height:       6           // Range height
+    readonly property int       weather_now_dot_size:       8           // Now dot size 
+    readonly property int       weather_label_font_size:    11          // Label font size
+    readonly property string    weather_feels_icon:         "\ue350"    // Feels like icon
+    readonly property string    weather_humidity_icon:      "\ue373"    // Humidity icon
+    readonly property string    weather_wind_icon:          "\ue34b"    // Wind icon
+    readonly property string    weather_sunrise_icon:       "\ue34c"    // Sunrise icon
+    readonly property string    weather_sunset_icon:        "\ue34d"    // Sunset icon
 }
